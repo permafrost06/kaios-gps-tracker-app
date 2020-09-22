@@ -1,0 +1,13 @@
+next in line:
+* start, pause, stop - save option on stop
+* stopwatch, distance, pace, speed
+* signal strength
+* no start until strong signal
+* clear up codebase
+* move to framework - new version
+* adjustable accuracy threshold
+* file history
+* bluetooth file transfer
+
+done:
+* toast notifications
