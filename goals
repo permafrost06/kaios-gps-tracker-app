@@ -1,13 +1,25 @@
+currently working:
+* fix behaviour
+* no start until strong signal
+* signal strength
+
+important:
+* finalize conventions
+
+on hold:
+* storage - get all routes
+
 next in line:
 * start, pause, stop - save option on stop
 * stopwatch, distance, pace, speed
-* signal strength
-* no start until strong signal
-* clear up codebase
-* move to framework - new version
 * adjustable accuracy threshold
-* file history
+* history view
+* gpx file export from history
 * bluetooth file transfer
 
 done:
 * toast notifications
+* clear up codebase
+* move to framework - new version (note: still vanilla but really well organized at this point)
+* map display with polylines
+* map pan & zoom

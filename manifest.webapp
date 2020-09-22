@@ -17,7 +17,8 @@
   "permissions": {
     "desktop-notification":{},
     "geolocation": {"description": "just do it man"},
-    "device-storage:sdcard": {"description": "test file operations", "access": "readcreate"}
+    "device-storage:sdcard": {"description": "test file operations", "access": "readcreate"},
+    "systemXHR": {"description": "required for map display"}
   },
   "installs_allowed_from": [
     "*"

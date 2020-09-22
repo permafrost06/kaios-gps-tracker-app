@@ -1,55 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Privileged app</title>
-        <meta name="description" content="A privileged app stub">
 
-        <!--
-          viewport allows you to control how mobile browsers will render your content.
-          width=device-width tells mobile browsers to render your content across the
-          full width of the screen, without being zoomed out (by default it would render
-          it at a desktop width, then shrink it to fit.)
-          Read more about it here:
-          https://developer.mozilla.org/Mozilla/Mobile/Viewport_meta_tag
-        -->
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="css/app.css">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="rgb(106, 0, 128)" />
+    <meta name="description" content="A geolocation tracking app[alpha]">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="js/libs/leaflet/leaflet.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/softkey.css">
+    <link rel="stylesheet" href="css/app.css">
+    <title>GEOLOCATION</title>
+</head>
 
-        <!--
-        Inline JavaScript code is not allowed for privileged and certified apps,
-        due to Content Security Policy restrictions.
-        You can read more about it here: https://developer.mozilla.org/Apps/CSP
-        Plus keeping your JavaScript separated from your HTML is always a good practice!
+<body>
+    <div id="app">
+        <header class="header">
+            Geolocation
+        </header>
 
-        We're also using the 'defer' attribute. This allows us to tell the browser that
-        it should not wait for this file to load before continuing to load the rest of
-        resources in the page. Then, once everything has been loaded, it will parse and
-        execute the deferred files.
-        Read about defer: https://developer.mozilla.org/Web/HTML/Element/script#attr-defer
-        -->
-        <script type="text/javascript" src="js/libs/easytimer/dist/easytimer.min.js" defer></script>
-        <script type="text/javascript" src="js/app.js" defer></script>
+        <div>
+            <center>
+                <p id="message"></p>
+            </center>
+        </div>
 
-        <!--
-        The following two lines are for loading the localisations library
-        and the localisation data-so people can use the app in their
-        own language (as long as you provide translations).
-        -->
-        <link rel="prefetch" type="application/l10n" href="data/locales.ini" />
-        <script type="text/javascript" src="js/libs/l10n.js" defer></script>
-    </head>
-    <body>
-        <section id="app">
-            <header class="header">GEOLOCATION</header>
-            <!-- <h1 data-l10n-id="app_title">Privileged empty app</h1>
-            <p data-l10n-id="app_description">This app is empty. Fill it with your own stuff!</p> -->
-            <center><p id="message">Press "Start" to begin tracking</p></center>
-        </section>
+        <div id="map"></div>
+
         <div id="softkey" class="softkey">
             <label class="left">Write</label>
             <label class="center">Start</label>
             <label class="right">Stop</label>
         </div>
-    </body>
+    </div>
+    <script src="js/libs/localforage.min.js"></script>
+    <script src="js/libs/leaflet/leaflet.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/tracking.js"></script>
+    <script src="js/xmlhandling.js"></script>
+    <script src="js/gps.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
 </html>
